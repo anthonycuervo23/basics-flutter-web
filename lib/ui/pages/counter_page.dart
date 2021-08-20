@@ -19,7 +19,7 @@ class _CounterPageState extends State<CounterPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Stateful Counter',
+            'Stateful Counter.',
             style: TextStyle(
               fontSize: 20.0,
             ),
