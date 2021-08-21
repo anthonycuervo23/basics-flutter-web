@@ -6,12 +6,15 @@ import 'package:web_flutter_development/providers/counter_provider.dart';
 import 'package:web_flutter_development/ui/shared/custom_text_button.dart';
 
 class CounterProviderView extends StatelessWidget {
-  const CounterProviderView({Key? key}) : super(key: key);
+  const CounterProviderView({Key? key, required this.query}) : super(key: key);
+
+  final String query;
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<CounterProvider>(
-        create: (_) => CounterProvider(), child: _CounterProviderViewBody());
+        create: (_) => CounterProvider(query),
+        child: _CounterProviderViewBody());
   }
 }
 

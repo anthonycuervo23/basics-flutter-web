@@ -57,6 +57,25 @@ class _TableDesktopMenu extends StatelessWidget {
               onPressed: () => locator<NavigationService>().navigateTo('/123'),
               color: Colors.black,
             ),
+            SizedBox(
+              width: 10.0,
+            ),
+            CustomTextButton(
+              text: 'Stateful 100',
+              onPressed: () =>
+                  locator<NavigationService>().navigateTo('/stateful/100'),
+              color: Colors.black,
+            ),
+            SizedBox(
+              width: 10.0,
+            ),
+            CustomTextButton(
+              text: 'Provider 200',
+              //onPressed: () => Navigator.pushNamed(context, '/provider'),
+              onPressed: () =>
+                  locator<NavigationService>().navigateTo('/provider?q=200'),
+              color: Colors.black,
+            ),
           ],
         ));
   }
@@ -70,41 +89,42 @@ class _MobileMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: 20.0,
-          vertical: 10.0,
-        ),
-        width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomTextButton(
-              text: 'Counter Stateful',
-              //onPressed: () => Navigator.pushNamed(context, '/stateful'),
-              onPressed: () =>
-                  locator<NavigationService>().navigateTo('/stateful'),
-              color: Colors.black,
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
-            CustomTextButton(
-              text: 'Counter Provider',
-              //onPressed: () => Navigator.pushNamed(context, '/provider'),
-              onPressed: () =>
-                  locator<NavigationService>().navigateTo('/provider'),
-              color: Colors.black,
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
-            CustomTextButton(
-              text: 'Another Page',
-              //onPressed: () => Navigator.pushNamed(context, '/123'),
-              onPressed: () => locator<NavigationService>().navigateTo('/123'),
-              color: Colors.black,
-            ),
-          ],
-        ));
+      padding: EdgeInsets.symmetric(
+        horizontal: 20.0,
+        vertical: 10.0,
+      ),
+      width: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomTextButton(
+            text: 'Counter Stateful',
+            //onPressed: () => Navigator.pushNamed(context, '/stateful'),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo('/stateful'),
+            color: Colors.black,
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
+          CustomTextButton(
+            text: 'Counter Provider',
+            //onPressed: () => Navigator.pushNamed(context, '/provider'),
+            onPressed: () =>
+                locator<NavigationService>().navigateTo('/provider'),
+            color: Colors.black,
+          ),
+          SizedBox(
+            width: 10.0,
+          ),
+          CustomTextButton(
+            text: 'Another Page',
+            //onPressed: () => Navigator.pushNamed(context, '/123'),
+            onPressed: () => locator<NavigationService>().navigateTo('/123'),
+            color: Colors.black,
+          ),
+        ],
+      ),
+    );
   }
 }
